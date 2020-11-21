@@ -1,4 +1,6 @@
-package pt.pa.model.abstractfactory;
+package pt.pa.patterns.abstractfactory;
+
+import pt.pa.model.*;
 
 /**
  *
@@ -22,6 +24,6 @@ public class IEEECitationStyleFactory implements CitationStyleFactory {
 
     @Override
     public BibliographyManager createManager() {
-        return null;
+        return new IEEEBibliographyManager();
     }
 }

@@ -1,4 +1,4 @@
-package pt.pa.model.simplefactory;
+package pt.pa.model;
 
 /**
  * IEEE bibliography style for a Journal:
@@ -7,7 +7,7 @@ package pt.pa.model.simplefactory;
  *
  * @author brunomnsilva
  */
-public class JournalCitation implements Citation {
+public class IEEEJournalCitation implements Citation {
 
     protected String author;
     protected String title;
@@ -16,8 +16,8 @@ public class JournalCitation implements Citation {
     private String page_numbers;
     private String year;
 
-    public JournalCitation(String author, String title, String journal_title, String volume_issue,
-                           String page_numbers, String year) {
+    public IEEEJournalCitation(String author, String title, String journal_title, String volume_issue,
+                               String page_numbers, String year) {
         this.author = author;
         this.title = title;
         this.journal_title = journal_title;
@@ -28,8 +28,8 @@ public class JournalCitation implements Citation {
 
     @Override
     public String toStringFormatted() {
-        return author + ", " + "\"" + title + "\"" + ", " + journal_title + ", vol. "
-                + volume_issue + ", pp. " + page_numbers + ", " + year + ".";
+        return String.format("%s, \"%s\", %s, vol. %s, pp. %s, %s.",
+                author, title, journal_title, volume_issue, page_numbers, year);
     }
 
     @Override

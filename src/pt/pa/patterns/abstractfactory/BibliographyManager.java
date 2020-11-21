@@ -1,11 +1,13 @@
-package pt.pa.model.abstractfactory;
+package pt.pa.patterns.abstractfactory;
+
+import pt.pa.model.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class BibliographyManager {
 
-    private List<Citation> list;
+    private final List<Citation> list;
 
     public BibliographyManager() {
         list = new ArrayList<>();
@@ -15,7 +17,7 @@ public abstract class BibliographyManager {
         list.add(citation);
     }
 
-    public List<Citation> getAll() {
+    public final List<Citation> getAll() {
         return new ArrayList<>( list );
     }
 

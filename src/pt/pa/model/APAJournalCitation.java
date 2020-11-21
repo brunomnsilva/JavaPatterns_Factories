@@ -1,7 +1,7 @@
-package pt.pa.model.abstractfactory;
+package pt.pa.model;
 
 /**
- * IEEE bibliography style for a Journal:
+ * APA bibliography style for a Journal:
  *
  *  - #AUTHOR#, "#TITLE#", #JOURNAL_TITLE#, vol. #VOLUME#, pp. #PAGE_NUMBERS#, #YEAR#.
  *

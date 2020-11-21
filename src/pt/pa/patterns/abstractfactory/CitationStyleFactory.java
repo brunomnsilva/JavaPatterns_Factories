@@ -1,4 +1,6 @@
-package pt.pa.model.factorymethod;
+package pt.pa.patterns.abstractfactory;
+
+import pt.pa.model.*;
 
 /**
  *
@@ -29,6 +31,7 @@ public interface CitationStyleFactory {
      * @param args list of arguments according to publication type
      * @return a citation instance.
      */
-    Citation create(String type, String ... args);
+    Citation createCitation(String type, String ... args);
 
+    BibliographyManager createManager();
 }

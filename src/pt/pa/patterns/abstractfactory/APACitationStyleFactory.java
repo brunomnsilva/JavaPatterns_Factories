@@ -1,4 +1,6 @@
-package pt.pa.model.factorymethod;
+package pt.pa.patterns.abstractfactory;
+
+import pt.pa.model.*;
 
 /**
  *
@@ -7,7 +9,7 @@ package pt.pa.model.factorymethod;
  */
 public class APACitationStyleFactory implements CitationStyleFactory {
     @Override
-    public Citation create(String type, String... args) {
+    public Citation createCitation(String type, String... args) {
         switch(type.toLowerCase()) {
             case "book":
                 return new APABookCitation(args[0], args[1], args[2], args[3], args[4]);
@@ -18,5 +20,10 @@ public class APACitationStyleFactory implements CitationStyleFactory {
             default:
                 throw new UnsupportedOperationException("Type not supported: " + type);
         }
+    }
+
+    @Override
+    public BibliographyManager createManager() {
+        return new APABibliographyManager();
     }
 }

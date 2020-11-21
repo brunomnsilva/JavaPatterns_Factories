@@ -1,7 +1,14 @@
-package pt.pa.model.factorymethod;
+package pt.pa.patterns.factorymethod;
+
+import pt.pa.model.Citation;
+import pt.pa.model.IEEEBookChapterCitation;
+import pt.pa.model.IEEEBookCitation;
+import pt.pa.model.IEEEJournalCitation;
 
 /**
+ * Concrete implementation of the IEEE Citation factory.
  *
+ * Concrete products returned by this factory are all from the IEEE family.
  *
  * @author brunomnsilva
  */

@@ -1,7 +1,7 @@
-package pt.pa.model.abstractfactory;
+package pt.pa.model;
 
 /**
- * IEEE bibliography style for a Book Chapter:
+ * APA bibliography style for a Book Chapter:
  *
  *  - #AUTHOR#, "#TITLE#" in #BOOK_TITLE#, #EDITOR#, Ed. #PLACE#: #PUBLISHER#, #YEAR#. #PAGE_NUMBERS#.
  *

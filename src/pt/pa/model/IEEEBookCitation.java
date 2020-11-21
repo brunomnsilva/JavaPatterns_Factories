@@ -1,5 +1,4 @@
-package pt.pa.model.simplefactory;
-
+package pt.pa.model;
 
 /**
  * IEEE bibliography style for a Book:
@@ -8,7 +7,7 @@ package pt.pa.model.simplefactory;
  *
  * @author brunomnsilva
  */
-public class BookCitation implements Citation {
+public class IEEEBookCitation implements Citation {
 
     protected String author;
     protected String title;
@@ -16,7 +15,7 @@ public class BookCitation implements Citation {
     private String publisher;
     private String year;
 
-    public BookCitation(String author, String title, String place, String publisher, String year) {
+    public IEEEBookCitation(String author, String title, String place, String publisher, String year) {
         this.author = author;
         this.title = title;
         this.place = place;
@@ -26,7 +25,8 @@ public class BookCitation implements Citation {
 
     @Override
     public String toStringFormatted() {
-        return author + ", " + title + ", " + place + ": " + publisher + ", " + year + ".";
+        return String.format("%s, %s, %s: %s, %s.", author, title, place,
+                publisher, year);
     }
 
     @Override

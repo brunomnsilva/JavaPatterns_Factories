@@ -1,9 +1,9 @@
-package pt.pa.model.factorymethod;
+package pt.pa.model;
 
 /**
  * IEEE bibliography style for a Book Chapter:
  *
- *  - #AUTHOR#, "#TITLE#" in #BOOK_TITLE#, #EDITOR#, Ed. #PLACE#: #PUBLISHER#, #YEAR#. #PAGE_NUMBERS#.
+ *  - #AUTHOR#, "#TITLE#" in #BOOK_TITLE#, #EDITOR#, Ed. #PLACE#: #PUBLISHER#, #YEAR#, pp. #PAGE_NUMBERS#.
  *
  * @author brunomnsilva
  */
@@ -32,8 +32,8 @@ public class IEEEBookChapterCitation implements Citation {
 
     @Override
     public String toStringFormatted() {
-        return author + ", \"" + title + "\" in " + book_title + ", "
-                + editor + ", Ed. " + place + ": " + publisher + ", " + year + ". " + page_numbers + ".";
+        return String.format("%s, \"%s\" in %s, %s, Ed. %s: %s, %s, pp. %s.", author, title,
+                book_title, editor, place, publisher, year, page_numbers);
     }
 
     @Override

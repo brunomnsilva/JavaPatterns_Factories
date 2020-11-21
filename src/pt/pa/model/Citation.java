@@ -1,7 +1,7 @@
-package pt.pa.model.factorymethod;
+package pt.pa.model;
 
 /**
- * Represents a bibliography citation.
+ * Interface required for a bibliography citation.
  *
  * @author brunomnsilva
  */

@@ -1,6 +1,16 @@
-package pt.pa.model.abstractfactory;
+package pt.pa.patterns.factorymethod;
+
+import pt.pa.model.Citation;
 
 /**
+ * Citation factory.
+ *
+ * Implements the Factory Method pattern.
+ *
+ * The factory method declares a method that creates the type of object
+ * required by the caller.
+ *
+ * The concrete product types are defined by the concrete implementations of this factory.
  *
  * @author brunomnsilva
  */
@@ -29,7 +39,6 @@ public interface CitationStyleFactory {
      * @param args list of arguments according to publication type
      * @return a citation instance.
      */
-    Citation createCitation(String type, String ... args);
+    Citation create(String type, String ... args);
 
-    BibliographyManager createManager();
 }
