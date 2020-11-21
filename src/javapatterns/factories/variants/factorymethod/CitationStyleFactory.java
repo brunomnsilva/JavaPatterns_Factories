@@ -1,6 +1,6 @@
-package pt.pa.patterns.factorymethod;
+package javapatterns.factories.variants.factorymethod;
 
-import pt.pa.model.Citation;
+import javapatterns.factories.model.Citation;
 
 /**
  * Citation factory.

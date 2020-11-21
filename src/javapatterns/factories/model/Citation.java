@@ -1,4 +1,4 @@
-package pt.pa.model;
+package javapatterns.factories.model;
 
 /**
  * Interface required for a bibliography citation.

@@ -1,6 +1,9 @@
-package pt.pa.patterns.simplefactory;
+package javapatterns.factories.variants.simplefactory;
 
-import pt.pa.model.*;
+import javapatterns.factories.model.Citation;
+import javapatterns.factories.model.IEEEBookChapterCitation;
+import javapatterns.factories.model.IEEEBookCitation;
+import javapatterns.factories.model.IEEEJournalCitation;
 
 /**
  * Citation factory.

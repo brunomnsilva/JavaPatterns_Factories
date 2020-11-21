@@ -1,10 +1,12 @@
-package pt.pa.patterns.abstractfactory;
+package javapatterns.factories.variants.abstractfactory;
 
-import pt.pa.model.*;
+import javapatterns.factories.model.APABookChapterCitation;
+import javapatterns.factories.model.APABookCitation;
+import javapatterns.factories.model.APAJournalCitation;
+import javapatterns.factories.model.Citation;
 
 /**
- *
- *
+ * APA Citation Style Abstract Factory
  * @author brunomnsilva
  */
 public class APACitationStyleFactory implements CitationStyleFactory {

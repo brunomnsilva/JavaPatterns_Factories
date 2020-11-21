@@ -1,4 +1,4 @@
-package pt.pa.model;
+package javapatterns.factories.model;
 
 /**
  * IEEE bibliography style for a Book Chapter:

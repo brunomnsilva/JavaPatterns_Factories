@@ -1,13 +1,13 @@
-package pt.pa.model;
+package javapatterns.factories.model;
 
 /**
- * APA bibliography style for a Book:
+ * IEEE bibliography style for a Book:
  *
  *  - #AUTHOR#, #TITLE#, #PLACE#: #PUBLISHER#, #YEAR#.
  *
  * @author brunomnsilva
  */
-public class APABookCitation implements Citation {
+public class IEEEBookCitation implements Citation {
 
     protected String author;
     protected String title;
@@ -15,7 +15,7 @@ public class APABookCitation implements Citation {
     private String publisher;
     private String year;
 
-    public APABookCitation(String author, String title, String place, String publisher, String year) {
+    public IEEEBookCitation(String author, String title, String place, String publisher, String year) {
         this.author = author;
         this.title = title;
         this.place = place;
@@ -25,7 +25,8 @@ public class APABookCitation implements Citation {
 
     @Override
     public String toStringFormatted() {
-        return "TODO"; //TODO: apply citation style format
+        return String.format("%s, %s, %s: %s, %s.", author, title, place,
+                publisher, year);
     }
 
     @Override

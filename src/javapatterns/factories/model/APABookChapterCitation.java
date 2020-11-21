@@ -1,4 +1,4 @@
-package pt.pa.model;
+package javapatterns.factories.model;
 
 /**
  * APA bibliography style for a Book Chapter:
@@ -32,7 +32,7 @@ public class APABookChapterCitation implements Citation {
 
     @Override
     public String toStringFormatted() {
-        return "TODO"; //TODO: apply citation style format
+        return "//TODO: apply citation style format";
     }
 
     @Override

@@ -1,7 +1,6 @@
-package pt.pa.patterns.abstractfactory;
+package javapatterns.factories.variants.abstractfactory;
 
-import pt.pa.model.*;
-
+import javapatterns.factories.model.Citation;
 import java.util.List;
 
 public class APABibliographyManager extends BibliographyManager {

@@ -1,15 +1,20 @@
-package pt.pa.patterns.abstractfactory;
+package javapatterns.factories.variants.factorymethod;
 
-import pt.pa.model.*;
+import javapatterns.factories.model.Citation;
+import javapatterns.factories.model.IEEEBookChapterCitation;
+import javapatterns.factories.model.IEEEBookCitation;
+import javapatterns.factories.model.IEEEJournalCitation;
 
 /**
+ * Concrete implementation of the IEEE Citation factory.
  *
+ * Concrete products returned by this factory are all from the IEEE family.
  *
  * @author brunomnsilva
  */
 public class IEEECitationStyleFactory implements CitationStyleFactory {
     @Override
-    public Citation createCitation(String type, String... args) {
+    public Citation create(String type, String... args) {
         switch(type.toLowerCase()) {
             case "book":
                 return new IEEEBookCitation(args[0], args[1], args[2], args[3], args[4]);
@@ -20,10 +25,5 @@ public class IEEECitationStyleFactory implements CitationStyleFactory {
             default:
                 throw new UnsupportedOperationException("Type not supported: " + type);
         }
-    }
-
-    @Override
-    public BibliographyManager createManager() {
-        return new IEEEBibliographyManager();
     }
 }

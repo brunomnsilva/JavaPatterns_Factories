@@ -1,6 +1,6 @@
-package pt.pa.patterns.simplefactory;
+package javapatterns.factories.variants.simplefactory;
 
-import pt.pa.model.*;
+import javapatterns.factories.model.Citation;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +38,5 @@ public class MainSimpleFactory {
         for(Citation c : bibliography) {
             System.out.println(c.toStringFormatted());
         }
-
     }
 }
