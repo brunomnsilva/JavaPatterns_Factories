@@ -33,5 +33,9 @@ public interface CitationStyleFactory {
      */
     Citation createCitation(String type, String ... args);
 
+    /**
+     * Returns the respective bibliography manager for the family of citations.
+     * @return a bibliography manager.
+     */
     BibliographyManager createManager();
 }
